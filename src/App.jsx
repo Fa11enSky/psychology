@@ -6,17 +6,17 @@ import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
-    <div>
+    
       <Routes>
-        <Route path="/" element={<Layout/>}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="psychologists" element={<Psychologists/>}/>
-          <Route path="favorites" element={<Favorites/>} />
+          <Route path="psychologists" element={<Psychologists />} />
+          <Route path="favorites" element={<Favorites />} />
         </Route>
-        
+
         <Route path="*" element={<div>NF</div>} />
       </Routes>
-    </div>
+   
   );
 }
 
