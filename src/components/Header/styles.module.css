@@ -53,6 +53,10 @@
   color: rgb(25, 26, 21);
   border: 1px solid rgba(25, 26, 21, 0.2);
   border-radius: 30px;
+  transition: border-color 250ms linear;
+}
+.login:hover{
+  border-color: var(--main-accent-hover);
 }
 .register {
     color: rgb(251, 251, 251);
@@ -60,4 +64,8 @@
     outline: none;
   border-radius: 30px;
   background-color: rgb(84, 190, 150);
+  transition: background-color 250ms linear;
+}
+.register:hover{
+  background-color: var(--main-accent-hover);
 }
