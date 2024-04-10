@@ -49,3 +49,25 @@ ul,ol{
   padding: 0;
   list-style-type: none;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* To active link */
+nav .active{
+  position: relative;
+}
+nav .active::after{
+  content: '';
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background-color: var(--main-accent);
+  bottom: -4px;
+  left: 50%;
+  transform: translate(-50%,50%);
+  /* top: 5px; */
+}
