@@ -16,7 +16,7 @@
 }
 .heroTitle > span {
   font-style: italic;
-  color: #3470ff;
+  color: var(--main-accent);
 }
 .heroDescription {
   max-width: 510px;
@@ -32,7 +32,7 @@
   gap: 18px;
   border: none;
   outline: none;
-  background-color: #3470ff;
+  background-color: var(--main-accent);
   border-radius: 30px;
   padding: 18px 50px;
   font-weight: 500;
@@ -46,7 +46,7 @@
   fill: #fbfbfb;
 }
 .heroBtn:hover {
-  background-color: #255ee8;
+  background-color: var(--main-accent-hover);
 }
 .imageWrapper {
   max-width: 464px;
@@ -58,7 +58,7 @@
   bottom: 75px;
   left: -101px;
   border-radius: 20px;
-  background-color: #3470ff;
+  background-color: var(--main-accent);
   max-width: 311px;
   padding: 32px;
   display: flex;
