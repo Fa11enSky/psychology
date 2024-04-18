@@ -1,0 +1,85 @@
+.hero {
+  padding-top: 78px;
+  display: flex;
+  gap: 125px;
+  flex-wrap: wrap;
+}
+.heroWrapper {
+  max-width: 595px;
+}
+.heroTitle {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 1.025;
+  letter-spacing: -0.02em;
+  color: #191a15;
+}
+.heroTitle > span {
+  font-style: italic;
+  color: #3470ff;
+}
+.heroDescription {
+  max-width: 510px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+  color: #191a15;
+}
+.heroBtn {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: none;
+  outline: none;
+  background-color: #3470ff;
+  border-radius: 30px;
+  padding: 18px 50px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  transition: background-color 250ms linear;
+}
+.heroBtn > svg {
+  fill: #fbfbfb;
+}
+.heroBtn:hover {
+  background-color: #255ee8;
+}
+.imageWrapper {
+  max-width: 464px;
+  border-radius: 10px;
+  position: relative;
+}
+.checkIconBox {
+  position: absolute;
+  bottom: 75px;
+  left: -101px;
+  border-radius: 20px;
+  background-color: #3470ff;
+  max-width: 311px;
+  padding: 32px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.checkIconBox span {
+  font-size: 14px;
+  color: rgba(251, 251, 251, 0.5);
+}
+.checkIconBoxText .quantity {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fbfbfb;
+}
+.checkSvg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  padding: 12px;
+  background-color: #fbfbfb;
+}
