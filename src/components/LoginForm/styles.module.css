@@ -1,0 +1,30 @@
+.formWrapper {
+    position: relative;
+  border-radius: 30px;
+  max-width: 565px;
+  height: 509px;
+  background-color: #fbfbfb;
+  padding: 64px;
+}
+.closeBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.closeBtn >svg{
+    stroke: #191a15;
+
+;
+}
+.showPassBtn{
+    
+}
+.showPassBtn >svg{
+   color:#191A15;
+}
