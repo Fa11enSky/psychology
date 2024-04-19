@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import css from "./styles.module.css";
 import svg from "../../assets/sprite/sprite.svg";
+import LoginForm from "../LoginForm/LoginForm";
+import Backdrop from "../Backdrop/Backdrop";
 const Hero = () => {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const loginModalToggle = () => {
+    setIsLoginOpen(!isLoginOpen);
+  };
+
   return (
     <section className={css.hero}>
       <div className={css.heroWrapper}>
@@ -13,7 +20,7 @@ const Hero = () => {
           guide in your own life with the help of our experienced psychologists.
         </p>
         {/* <img srcSet={require("../../assets/hero-girl@1x.jpeg")} alt="girl" width={464} height={526} /> */}
-        <button className={css.heroBtn}>
+        <button onClick={loginModalToggle} className={css.heroBtn}>
           Get started{" "}
           <svg width={18} height={14}>
             <use href={`${svg}#icon-arrow`} />
@@ -38,27 +45,32 @@ const Hero = () => {
           />
         </picture>
         <span className={css.usersIconWrapper}>
-          <svg style={{ fill: "red" }} width={20} height={20}>
+          <svg width={20} height={20}>
             <use href={`${svg}#icon-users`} />
           </svg>
         </span>
         <span className={css.questionIconWrapper}>
-          <svg style={{ fill: "red" }} width={10} height={17}>
+          <svg width={9} height={15}>
             <use href={`${svg}#icon-question`} />
           </svg>
         </span>
-        <div  className={css.checkIconBox}>
-         <span className={css.checkSvg}>
+        <div className={css.checkIconBox}>
+          <span className={css.checkSvg}>
             <svg style={css.checkIconBoxSvg} width={20} height={20}>
               <use href={`${svg}#icon-check`} />
             </svg>
-         </span>
-         <div className={css.checkIconBoxText}>
+          </span>
+          <div className={css.checkIconBoxText}>
             <span>Experienced psychologists</span>
             <span className={css.quantity}>15,000</span>
-         </div>
+          </div>
         </div>
       </div>
+      {isLoginOpen && (
+        <Backdrop onClose={loginModalToggle}>
+          <LoginForm onClose={loginModalToggle} />
+        </Backdrop>
+      )}
     </section>
   );
 };

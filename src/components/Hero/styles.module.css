@@ -81,5 +81,43 @@
   justify-content: center;
   border-radius: 13px;
   padding: 12px;
+  fill: var(--main-accent);
   background-color: #fbfbfb;
+}
+
+.questionIconWrapper {
+  position: absolute;
+  top: 185px;
+  left: -39px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4535af;
+  transform: rotate(-15deg);
+}
+.questionIconWrapper > svg {
+  transform: rotate(15deg);
+  fill: #fbfbfb;
+  width: 10px;
+  height: 17px;
+}
+.usersIconWrapper {
+  position: absolute;
+  top: 38px;
+  right: -44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #fbc75e;
+  transform: rotate(15deg);
+}
+.usersIconWrapper > svg {
+  transform: rotate(-15deg);
+  fill: #fbfbfb;
 }
