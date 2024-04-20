@@ -5,6 +5,7 @@ import LoginForm from "../LoginForm/LoginForm";
 import Backdrop from "../Backdrop/Backdrop";
 const Hero = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  
   const loginModalToggle = () => {
     setIsLoginOpen(!isLoginOpen);
   };

@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
+import React, { FC, MouseEvent, ReactNode, useEffect } from "react";
 import css from "./styles.module.css";
 import ModalPortal from "../ModalPortal/ModalPortal";
-const Backdrop = ({ children, onClose }) => {
-  const closeModal = (e) => {
+
+interface BackdropProps{
+  onClose: () => void;
+  children: ReactNode;
+}
+const Backdrop:FC<BackdropProps> = ({ children, onClose }) => {
+  const closeModal = (e:MouseEvent):void => {
     if (e.target === e.currentTarget) {
       onClose();
       return;
@@ -10,7 +15,7 @@ const Backdrop = ({ children, onClose }) => {
   };
 
   useEffect(() => {
-    const handleKeydown = (e) => {
+    const handleKeydown = (e:KeyboardEvent) => {
       if (e.code === "Escape") {
         onClose();
       }

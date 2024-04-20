@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import css from "./styles.module.css";
 import svg from '../../assets/sprite/sprite.svg'
-const LoginForm = ({ onClose }) => {
+
+interface LoginFormProps{
+  onClose:()=>void
+}
+
+const LoginForm = ({ onClose }: LoginFormProps) => {
   const [isShowPass, setIsShowPass] = useState(false);
   const showPass = () => {
     setIsShowPass(!isShowPass);
