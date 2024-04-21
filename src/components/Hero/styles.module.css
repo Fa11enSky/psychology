@@ -34,6 +34,7 @@
   gap: 18px;
   border: none;
   outline: none;
+  max-width: 243px;
   background-color: var(--main-accent);
   border-radius: 30px;
   padding: 18px 50px;

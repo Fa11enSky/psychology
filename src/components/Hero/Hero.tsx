@@ -1,15 +1,8 @@
-import React, { useState } from "react";
 import css from "./styles.module.css";
 import svg from "../../assets/sprite/sprite.svg";
-import LoginForm from "../LoginForm/LoginForm";
-import Backdrop from "../Backdrop/Backdrop";
-const Hero = () => {
-  const [isLoginOpen, setIsLoginOpen] = useState<Boolean>(false);
-  
-  const loginModalToggle = ():void => {
-    setIsLoginOpen(!isLoginOpen);
-  };
+import { NavLink } from "react-router-dom";
 
+const Hero = () => {
   return (
     <section className={css.hero}>
       <div className={css.heroWrapper}>
@@ -20,13 +13,12 @@ const Hero = () => {
           We help you to reveal your potential, overcome challenges and find a
           guide in your own life with the help of our experienced psychologists.
         </p>
-        {/* <img srcSet={require("../../assets/hero-girl@1x.jpeg")} alt="girl" width={464} height={526} /> */}
-        <button onClick={loginModalToggle} className={css.heroBtn}>
+        <NavLink to={"/psychologists"} className={css.heroBtn}>
           Get started{" "}
           <svg width={18} height={14}>
             <use href={`${svg}#icon-arrow`} />
           </svg>
-        </button>
+        </NavLink>
       </div>
       <div className={css.imageWrapper}>
         <picture className={css.heroImg}>
@@ -67,11 +59,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {isLoginOpen && (
-        <Backdrop onClose={loginModalToggle}>
-          <LoginForm onClose={loginModalToggle} />
-        </Backdrop>
-      )}
     </section>
   );
 };
