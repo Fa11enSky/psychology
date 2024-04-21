@@ -4,9 +4,9 @@ import svg from "../../assets/sprite/sprite.svg";
 import LoginForm from "../LoginForm/LoginForm";
 import Backdrop from "../Backdrop/Backdrop";
 const Hero = () => {
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState<Boolean>(false);
   
-  const loginModalToggle = () => {
+  const loginModalToggle = ():void => {
     setIsLoginOpen(!isLoginOpen);
   };
 
