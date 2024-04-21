@@ -13,6 +13,7 @@
   line-height: 1.025;
   letter-spacing: -0.02em;
   color: #191a15;
+  margin-bottom: 20px;
 }
 .heroTitle > span {
   font-style: italic;
@@ -25,6 +26,7 @@
   line-height: 1.33333;
   letter-spacing: -0.02em;
   color: #191a15;
+  margin-bottom: 40px;
 }
 .heroBtn {
   display: flex;
