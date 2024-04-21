@@ -4,13 +4,14 @@ import  "firebase/auth";
 import "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
+import { apiKey } from "./keys";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB1lypdvAVBBcKQvOsfkrbIITOV4-CFDiM",
+  apiKey,
   authDomain: "psychologists-91c74.firebaseapp.com",
   databaseURL:
     "https://psychologists-91c74-default-rtdb.europe-west1.firebasedatabase.app",
